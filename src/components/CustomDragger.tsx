@@ -10,7 +10,7 @@ const CustomDragger = ({ setFileList }: any) => {
     multiple: true,
 
     onDrop(e) {
-      console.log("Dropped files", e.dataTransfer.files);
+      // console.log("Dropped files", e.dataTransfer.files);
     },
     beforeUpload(file, FileList) {
       setFileList(FileList.filter((f) => f.type !== ""));

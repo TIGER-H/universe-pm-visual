@@ -16,7 +16,6 @@ const DialogFromFile = ({ fileList }: { fileList: File[] }) => {
       ?.text()
       .then((t) => {
         const lines = t.split("\n");
-        console.log(lines);
         const headers = lines[0].split(",");
         const data = lines.slice(1).map((line) => {
           const values = line.split(",");
@@ -72,7 +71,7 @@ const DialogFromFile = ({ fileList }: { fileList: File[] }) => {
               // No file, TO FIX
               case "VOICE":
                 return;
-                
+
               default:
                 return <Dialog d={d} key={d["datetime(UTC)"]} />;
             }
